@@ -9,6 +9,7 @@
 |
 */
 
+import env from '#start/env'
 import 'reflect-metadata'
 import { Ignitor, prettyPrintError } from '@adonisjs/core'
 
