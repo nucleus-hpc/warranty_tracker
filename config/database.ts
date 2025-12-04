@@ -32,8 +32,8 @@ const dbConfig = defineConfig({
           rejectUnauthorized: false,
         },
 
-        prepare: false
-      },
+        prepare: false as false
+      } as any,
       pool: {
         min: 0, // Mínimo de conexiones en el pool
         max: 10, // Máximo de conexiones en el pool
