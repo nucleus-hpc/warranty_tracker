@@ -131,7 +131,7 @@ export default class extends BaseSeeder {
     for (const [i, item] of batch.entries()) {
       await this.createTicketWithHistory({
         trackingCode: `TRU-NEW-00${i + 1}`, productSku: item.sku, productName: item.name,
-        ownerName: item.user, ownerDpi: `1000 ${i}000 0101`, establishmentName: 'Ferretería Central',
+        ownerName: item.name, ownerDpi: `1000 ${i}000 0101`, establishmentName: 'Ferretería Central',
         problemDesc: item.prob, geoLat: 14.6 + (i * 0.01), geoLon: -90.5 + (i * 0.01)
       }, 1, 0)
     }
@@ -148,7 +148,7 @@ export default class extends BaseSeeder {
     for (const [i, item] of batch.entries()) {
       await this.createTicketWithHistory({
         trackingCode: `TRU-TRA-00${i + 1}`, productSku: item.sku, productName: item.name,
-        ownerName: item.user, ownerDpi: `2000 ${i}000 0101`, establishmentName: 'Agencias Way',
+        ownerName: item.name, ownerDpi: `2000 ${i}000 0101`, establishmentName: 'Agencias Way',
         problemDesc: item.prob, geoLat: 14.5 + (i * 0.01), geoLon: -90.4 + (i * 0.01)
       }, 2, 2)
     }
@@ -165,7 +165,7 @@ export default class extends BaseSeeder {
     for (const [i, item] of batch.entries()) {
       await this.createTicketWithHistory({
         trackingCode: `TRU-DIA-00${i + 1}`, productSku: item.sku, productName: item.name,
-        ownerName: item.user, ownerDpi: `3000 ${i}000 0101`, establishmentName: 'Novex',
+        ownerName: item.name, ownerDpi: `3000 ${i}000 0101`, establishmentName: 'Novex',
         problemDesc: item.prob, geoLat: 14.7 + (i * 0.01), geoLon: -90.6 + (i * 0.01)
       }, 3, 4)
     }
@@ -182,7 +182,7 @@ export default class extends BaseSeeder {
     for (const [i, item] of cases.entries()) {
       await this.createTicketWithHistory({
         trackingCode: `TRU-APP-00${i + 1}`, productSku: item.sku, productName: item.name,
-        ownerName: item.user, ownerDpi: `4000 ${i}000 0101`, establishmentName: 'El Martillo',
+        ownerName: item.name, ownerDpi: `4000 ${i}000 0101`, establishmentName: 'El Martillo',
         problemDesc: item.prob, geoLat: 14.8 + (i * 0.01), geoLon: -90.3 + (i * 0.01)
       }, 4, 7, {
         technicianNotes: item.note,
@@ -204,7 +204,7 @@ export default class extends BaseSeeder {
     for (const [i, item] of batch.entries()) {
       await this.createTicketWithHistory({
         trackingCode: `TRU-FIX-00${i + 1}`, productSku: item.sku, productName: item.name,
-        ownerName: item.user, ownerDpi: `5000 ${i}000 0101`, establishmentName: 'Cemaco',
+        ownerName: item.name, ownerDpi: `5000 ${i}000 0101`, establishmentName: 'Cemaco',
         problemDesc: item.prob, geoLat: 14.9, geoLon: -90.5
       }, 5, 10, { technicianNotes: 'En espera de repuestos.' })
     }
@@ -221,7 +221,7 @@ export default class extends BaseSeeder {
     for (const [i, item] of batch.entries()) {
       await this.createTicketWithHistory({
         trackingCode: `TRU-RDY-00${i + 1}`, productSku: item.sku, productName: item.name,
-        ownerName: item.user, ownerDpi: `6000 ${i}000 0101`, establishmentName: 'Novex',
+        ownerName: item.name, ownerDpi: `6000 ${i}000 0101`, establishmentName: 'Novex',
         problemDesc: item.prob, geoLat: 15.0, geoLon: -90.2
       }, 6, 15, { customerNotes: 'Listo para entrega en sucursal.' })
     }
@@ -238,7 +238,7 @@ export default class extends BaseSeeder {
     for (const [i, item] of cases.entries()) {
       await this.createTicketWithHistory({
         trackingCode: `TRU-REJ-00${i + 1}`, productSku: item.sku, productName: item.name,
-        ownerName: item.user || 'Cliente', ownerDpi: `7000 ${i}000 0101`, establishmentName: 'El Martillo',
+        ownerName: item.name || 'Cliente', ownerDpi: `7000 ${i}000 0101`, establishmentName: 'El Martillo',
         problemDesc: item.prob, geoLat: 14.5, geoLon: -90.5
       }, 7, 20, {
         technicianNotes: item.note,
