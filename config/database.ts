@@ -32,9 +32,6 @@ const dbConfig = defineConfig({
           rejectUnauthorized: false,
         },
 
-        // 2. 👇 ESTA ES LA SOLUCIÓN AL ERROR ENETUNREACH
-        // Fuerza a Node a usar IPv4 en lugar de intentar IPv6
-        family: 4,
         prepare: false
       },
       pool: {
